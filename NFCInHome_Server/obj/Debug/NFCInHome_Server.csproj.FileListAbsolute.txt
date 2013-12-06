@@ -1,0 +1,10 @@
+C:\Users\Nick\Documents\Visual Studio 2012\Projects\NFCInHome_Server\NFCInHome_Server\bin\Debug\NFCInHome_Server.exe.config
+C:\Users\Nick\Dropbox\Eigen spul\1. Fontys\Freaky Friday\NFCInHome_Server\bin\Debug\NFCInHome_Server.exe.config
+C:\Users\Nick\Dropbox\Eigen spul\1. Fontys\Freaky Friday\NFCInHome_Server\bin\Debug\NFCInHome_Server.exe
+C:\Users\Nick\Dropbox\Eigen spul\1. Fontys\Freaky Friday\NFCInHome_Server\bin\Debug\NFCInHome_Server.pdb
+C:\Users\Nick\Dropbox\Eigen spul\1. Fontys\Freaky Friday\NFCInHome_Server\obj\Debug\NFCInHome_Server.csprojResolveAssemblyReference.cache
+C:\Users\Nick\Dropbox\Eigen spul\1. Fontys\Freaky Friday\NFCInHome_Server\obj\Debug\NFCInHome_Server.Form1.resources
+C:\Users\Nick\Dropbox\Eigen spul\1. Fontys\Freaky Friday\NFCInHome_Server\obj\Debug\NFCInHome_Server.Properties.Resources.resources
+C:\Users\Nick\Dropbox\Eigen spul\1. Fontys\Freaky Friday\NFCInHome_Server\obj\Debug\NFCInHome_Server.csproj.GenerateResource.Cache
+C:\Users\Nick\Dropbox\Eigen spul\1. Fontys\Freaky Friday\NFCInHome_Server\obj\Debug\NFCInHome_Server.exe
+C:\Users\Nick\Dropbox\Eigen spul\1. Fontys\Freaky Friday\NFCInHome_Server\obj\Debug\NFCInHome_Server.pdb

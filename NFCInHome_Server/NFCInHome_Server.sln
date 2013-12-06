@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NFCInHome_Server", "NFCInHome_Server\NFCInHome_Server.csproj", "{A5B436B5-76CC-436C-9E0E-985BA9939CDB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5B436B5-76CC-436C-9E0E-985BA9939CDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5B436B5-76CC-436C-9E0E-985BA9939CDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5B436B5-76CC-436C-9E0E-985BA9939CDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5B436B5-76CC-436C-9E0E-985BA9939CDB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
