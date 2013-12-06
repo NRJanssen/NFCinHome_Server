@@ -1,4 +1,5 @@
-NFCinHome_Server
+NFCinHome Server
 ================
 
-NFCinHome_Server control
+This server is used to receive and process NFC commands broadcasted by the Android application
+
