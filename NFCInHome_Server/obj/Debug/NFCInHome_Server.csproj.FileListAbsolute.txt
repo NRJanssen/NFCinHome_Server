@@ -8,3 +8,6 @@ C:\Users\Nick\Dropbox\Eigen spul\1. Fontys\Freaky Friday\NFCInHome_Server\obj\De
 C:\Users\Nick\Dropbox\Eigen spul\1. Fontys\Freaky Friday\NFCInHome_Server\obj\Debug\NFCInHome_Server.csproj.GenerateResource.Cache
 C:\Users\Nick\Dropbox\Eigen spul\1. Fontys\Freaky Friday\NFCInHome_Server\obj\Debug\NFCInHome_Server.exe
 C:\Users\Nick\Dropbox\Eigen spul\1. Fontys\Freaky Friday\NFCInHome_Server\obj\Debug\NFCInHome_Server.pdb
+Z:\NFCinHome_Server\NFCInHome_Server\bin\Debug\NFCInHome_Server.exe.config
+Z:\NFCinHome_Server\NFCInHome_Server\obj\Debug\NFCInHome_Server.exe
+Z:\NFCinHome_Server\NFCInHome_Server\obj\Debug\NFCInHome_Server.pdb
