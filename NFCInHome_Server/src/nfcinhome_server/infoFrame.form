@@ -49,7 +49,9 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="messageList" min="-2" pref="186" max="-2" attributes="0"/>
-                  <EmptySpace pref="648" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
+                  <Component id="livingroom_table_lamp" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="486" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -60,11 +62,21 @@
                   <Component id="messageList" pref="456" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
+                  <Component id="livingroom_table_lamp" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
         <Component class="java.awt.List" name="messageList">
+        </Component>
+        <Component class="javax.swing.JLabel" name="livingroom_table_lamp">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="lamp"/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>

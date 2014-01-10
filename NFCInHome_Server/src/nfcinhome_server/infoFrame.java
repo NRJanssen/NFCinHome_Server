@@ -5,6 +5,16 @@
  */
 package nfcinhome_server;
 
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.imageio.ImageIO;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
 /**
  *
  * @author fhict
@@ -13,17 +23,39 @@ public class infoFrame extends javax.swing.JFrame {
 
     private NFCInHome_Server server = null;
     private Thread serverThread;
+    private Translator translator;
 
     /**
      * Creates new form infoFrame
      */
     public infoFrame() {
         initComponents();
+        initializePictures();
         startServer(this);
+        this.translator = new Translator();
+    }
+
+    private void initializePictures() {
+        try {
+            livingroom_table_lamp.setIcon(new ImageIcon(ImageIO.read(new File("images/livingroom_table_lamp.jpg"))));
+            livingroom_table_lamp.setVisible(false);
+        } catch (IOException ex) {
+            System.err.println(ex.toString());
+        }
     }
 
     public void addMessage(String message) {
         messageList.add(message);
+        handleMessage(Integer.valueOf(message));
+    }
+
+    private void handleMessage(int message) {
+        try {
+            JLabel image = (JLabel) infoFrame.class.getDeclaredField(translator.getCommandName(message)).get(this);
+            image.setVisible(true);
+        } catch (NoSuchFieldException | SecurityException | IllegalArgumentException | IllegalAccessException ex) {
+            System.err.println(ex.toString());
+        }
     }
 
     private void startServer(final infoFrame info) {
@@ -47,8 +79,11 @@ public class infoFrame extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         messageList = new java.awt.List();
+        livingroom_table_lamp = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        livingroom_table_lamp.setText("lamp");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -57,7 +92,9 @@ public class infoFrame extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(messageList, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(648, Short.MAX_VALUE))
+                .addGap(131, 131, 131)
+                .addComponent(livingroom_table_lamp)
+                .addContainerGap(486, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -65,6 +102,10 @@ public class infoFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(messageList, javax.swing.GroupLayout.DEFAULT_SIZE, 456, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(74, 74, 74)
+                .addComponent(livingroom_table_lamp)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -125,6 +166,8 @@ public class infoFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel livingroom_table_lamp;
     private java.awt.List messageList;
     // End of variables declaration//GEN-END:variables
+
 }
