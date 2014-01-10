@@ -5,15 +5,14 @@
  */
 package nfcinhome_server;
 
+import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.imageio.ImageIO;
-import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 
 /**
  *
@@ -23,7 +22,8 @@ public class infoFrame extends javax.swing.JFrame {
 
     private NFCInHome_Server server = null;
     private Thread serverThread;
-    private Translator translator;
+    private final Translator translator;
+    private JPanel b_panel;
 
     /**
      * Creates new form infoFrame
@@ -37,7 +37,11 @@ public class infoFrame extends javax.swing.JFrame {
 
     private void initializePictures() {
         try {
+            background.setSize(ImagePanel.getWidth(), ImagePanel.getHeight());
+            background.setText("");
+            background.setIcon(new ImageIcon(ImageIO.read(new File("images/background.png")).getScaledInstance(background.getWidth(), background.getHeight(), Image.SCALE_SMOOTH)));
             livingroom_table_lamp.setIcon(new ImageIcon(ImageIO.read(new File("images/livingroom_table_lamp.jpg"))));
+            livingroom_table_lamp.setText("");
             livingroom_table_lamp.setVisible(false);
         } catch (IOException ex) {
             System.err.println(ex.toString());
@@ -79,49 +83,75 @@ public class infoFrame extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         messageList = new java.awt.List();
+        ImagePanel = new javax.swing.JPanel();
+        background = new javax.swing.JLabel();
         livingroom_table_lamp = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        livingroom_table_lamp.setText("lamp");
+        setTitle("NFC In Home ");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(20, Short.MAX_VALUE)
                 .addComponent(messageList, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(131, 131, 131)
-                .addComponent(livingroom_table_lamp)
-                .addContainerGap(486, Short.MAX_VALUE))
+                .addGap(19, 19, 19))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(messageList, javax.swing.GroupLayout.DEFAULT_SIZE, 456, Short.MAX_VALUE)
                 .addContainerGap())
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(74, 74, 74)
+        );
+
+        background.setText("background");
+
+        livingroom_table_lamp.setText("livingroom_table_lamp");
+
+        javax.swing.GroupLayout ImagePanelLayout = new javax.swing.GroupLayout(ImagePanel);
+        ImagePanel.setLayout(ImagePanelLayout);
+        ImagePanelLayout.setHorizontalGroup(
+            ImagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ImagePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(background)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 481, Short.MAX_VALUE)
                 .addComponent(livingroom_table_lamp)
+                .addGap(87, 87, 87))
+        );
+        ImagePanelLayout.setVerticalGroup(
+            ImagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ImagePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(background, javax.swing.GroupLayout.PREFERRED_SIZE, 456, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ImagePanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(livingroom_table_lamp)
+                .addGap(211, 211, 211))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ImagePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(16, 16, 16)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(ImagePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -165,6 +195,8 @@ public class infoFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel ImagePanel;
+    private javax.swing.JLabel background;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel livingroom_table_lamp;
     private java.awt.List messageList;
