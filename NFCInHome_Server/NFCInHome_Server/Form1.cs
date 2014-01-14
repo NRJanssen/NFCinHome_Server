@@ -7,14 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Reflection;
 
 namespace NFCInHome_Server
 {
     public partial class Form1 : Form
     {
-        Translator translator;
+        private Translator translator;
+        private Form f;
         public Form1()
         {
+            this.f = this;
             InitializeComponent();
             translator = new Translator();
             Server s = new Server(this);
@@ -27,6 +30,13 @@ namespace NFCInHome_Server
             {
                 Command c = translator.getCommand(command);
                 lb_received_commands.Items.Add(c.getDescriptor());
+                foreach (System.Windows.Forms.Control pb in f.Controls.Find(c.getName(), false))
+                {
+                    if (pb.Name == c.getName()){
+                        PictureBox p = (PictureBox)pb;
+                        pb.Visible = false;
+                    }
+                }
             });
         }
     }
