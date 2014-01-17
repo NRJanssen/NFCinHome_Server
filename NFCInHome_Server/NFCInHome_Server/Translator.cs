@@ -18,8 +18,8 @@ namespace NFCInHome_Server
 
         private void fillTranslations()
         {
-            translations.Add(new Command("livingroom_table_lamp", "Table Lamp", 11));
-            translations.Add(new Command("livingroom_couch_lamp", "Couch Lamp", 12));
+            translations.Add(new Command("livingroom_table_lamp", "Table Lamp", 11, false, NFCInHome_Server.Properties.Resources.livingroom_table_lamp_on, NFCInHome_Server.Properties.Resources.livingroom_table_lamp_off));
+            translations.Add(new Command("livingroom_couch_lamp", "Couch Lamp", 12, false, NFCInHome_Server.Properties.Resources.livingroom_couch_lamp_on, NFCInHome_Server.Properties.Resources.livingroom_couch_lamp_off));
         }
 
         public Command getCommand(int command)

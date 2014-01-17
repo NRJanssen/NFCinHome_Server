@@ -29,12 +29,21 @@ namespace NFCInHome_Server
             this.Invoke((MethodInvoker)delegate
             {
                 Command c = translator.getCommand(command);
-                lb_received_commands.Items.Add(c.getDescriptor());
+                Console.WriteLine(c.getDescriptor());
                 foreach (System.Windows.Forms.Control pb in f.Controls.Find(c.getName(), false))
                 {
                     if (pb.Name == c.getName()){
                         PictureBox p = (PictureBox)pb;
-                        pb.Visible = false;
+                        if (!c.getVisible())
+                        {
+                            p.Image = c.getOnImage();
+                            c.setVisible(true);
+                        }
+                        else
+                        {
+                            p.Image = c.getOffImage();
+                            c.setVisible(false);
+                        }
                     }
                 }
             });

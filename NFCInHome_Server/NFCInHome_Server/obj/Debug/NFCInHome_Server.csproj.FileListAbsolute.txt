@@ -19,3 +19,9 @@ C:\Users\Nick\Documents\NFCinHome_Server\NFCInHome_Server\NFCInHome_Server\obj\D
 Z:\NFCinHome_Server\NFCInHome_Server\NFCInHome_Server\bin\Debug\NFCInHome_Server.exe.config
 Z:\NFCinHome_Server\NFCInHome_Server\NFCInHome_Server\obj\Debug\NFCInHome_Server.exe
 Z:\NFCinHome_Server\NFCInHome_Server\NFCInHome_Server\obj\Debug\NFCInHome_Server.pdb
+Z:\NFCinHome_Server\NFCInHome_Server\NFCInHome_Server\bin\Debug\NFCInHome_Server.exe
+Z:\NFCinHome_Server\NFCInHome_Server\NFCInHome_Server\bin\Debug\NFCInHome_Server.pdb
+Z:\NFCinHome_Server\NFCInHome_Server\NFCInHome_Server\obj\Debug\NFCInHome_Server.csprojResolveAssemblyReference.cache
+Z:\NFCinHome_Server\NFCInHome_Server\NFCInHome_Server\obj\Debug\NFCInHome_Server.Form1.resources
+Z:\NFCinHome_Server\NFCInHome_Server\NFCInHome_Server\obj\Debug\NFCInHome_Server.Properties.Resources.resources
+Z:\NFCinHome_Server\NFCInHome_Server\NFCInHome_Server\obj\Debug\NFCInHome_Server.csproj.GenerateResource.Cache
