@@ -63,6 +63,26 @@ namespace NFCInHome_Server.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fireplace_off {
+            get {
+                object obj = ResourceManager.GetObject("fireplace_off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fireplace_on {
+            get {
+                object obj = ResourceManager.GetObject("fireplace_on", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap livingroom {
             get {
                 object obj = ResourceManager.GetObject("livingroom", resourceCulture);

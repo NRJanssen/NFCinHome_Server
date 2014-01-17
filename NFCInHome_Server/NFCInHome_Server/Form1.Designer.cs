@@ -31,8 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.livingroom_table_lamp = new System.Windows.Forms.PictureBox();
             this.livingroom_couch_lamp = new System.Windows.Forms.PictureBox();
+            this.livingroom_heater = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.livingroom_table_lamp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.livingroom_couch_lamp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.livingroom_heater)).BeginInit();
             this.SuspendLayout();
             // 
             // livingroom_table_lamp
@@ -59,6 +61,17 @@
             this.livingroom_couch_lamp.TabIndex = 3;
             this.livingroom_couch_lamp.TabStop = false;
             // 
+            // livingroom_heater
+            // 
+            this.livingroom_heater.BackColor = System.Drawing.Color.Transparent;
+            this.livingroom_heater.Image = global::NFCInHome_Server.Properties.Resources.fireplace_off;
+            this.livingroom_heater.Location = new System.Drawing.Point(251, 452);
+            this.livingroom_heater.Name = "livingroom_heater";
+            this.livingroom_heater.Size = new System.Drawing.Size(270, 234);
+            this.livingroom_heater.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.livingroom_heater.TabIndex = 4;
+            this.livingroom_heater.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -66,6 +79,7 @@
             this.BackgroundImage = global::NFCInHome_Server.Properties.Resources.livingroom;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1218, 757);
+            this.Controls.Add(this.livingroom_heater);
             this.Controls.Add(this.livingroom_couch_lamp);
             this.Controls.Add(this.livingroom_table_lamp);
             this.DoubleBuffered = true;
@@ -74,6 +88,7 @@
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.livingroom_table_lamp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.livingroom_couch_lamp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.livingroom_heater)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -82,6 +97,7 @@
 
         private System.Windows.Forms.PictureBox livingroom_table_lamp;
         private System.Windows.Forms.PictureBox livingroom_couch_lamp;
+        private System.Windows.Forms.PictureBox livingroom_heater;
 
 
     }
